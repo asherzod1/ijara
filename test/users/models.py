@@ -25,7 +25,7 @@ class User(AbstractUser):
     name = CharField(_("Name of User"), blank=True, max_length=255)
     first_name = None  # type: ignore
     last_name = None  # type: ignore
-    email = EmailField(_("email address"), unique=True)
+    email = EmailField(_("email address"), null=True, blank=True)
     phone_number = CharField(_("Phone number"), max_length=13, unique=True, validators=[validate_phone_number])
     username = None  # type: ignore
 

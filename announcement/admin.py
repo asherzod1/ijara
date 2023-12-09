@@ -7,23 +7,23 @@ from announcement.models import Announcement, Transports, Like, Comment
 
 @admin.register(Announcement)
 class AnnouncementAdmin(admin.ModelAdmin):
-    raw_id_fields = ["id"]
+    list_display_links = ["id"]
     list_display = ["id", "title", "user"]
 
 
 @admin.register(Transports)
 class AnnouncementAdmin(admin.ModelAdmin):
-    raw_id_fields = ["id"]
+    list_display_links = ["id"]
     list_display = ["id", "name", "type"]
 
 
 @admin.register(Like)
 class AnnouncementAdmin(admin.ModelAdmin):
-    raw_id_fields = ["id"]
+    list_display_links = ["id"]
     list_display = ["id", "created", "user", "announcement"]
 
 
 @admin.register(Comment)
 class AnnouncementAdmin(admin.ModelAdmin):
-    raw_id_fields = ["id"]
+    list_display_links = ["id"]
     list_display = ["id", "created", "user", "announcement"]

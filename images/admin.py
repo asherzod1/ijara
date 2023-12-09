@@ -7,5 +7,5 @@ from images.models import Images
 
 @admin.register(Images)
 class ImagesAdmin(admin.ModelAdmin):
-    raw_id_fields = ["id"]
+    list_display_links = ["id"]
     list_display = ["uuid", "name"]
